@@ -4,7 +4,7 @@ import Home from "../assets/homepage.png";
 const Homepage = () => {
   return (
     <>
-      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-[80vw] md:min-w-fit max-w-full  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] mx-[19px]">
+      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] ">
         <div className="flex items-center text-xs leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
             now
@@ -39,7 +39,7 @@ const Homepage = () => {
               </span>
             </div>
           </div>
-          <div className="mt-[63.75px] md:mt-0 w-fit mx-auto  md:mx-0 md:max-w-[547px] relative  ">
+          <div className="mt-[63.75px] md:mt-0 w-fit mx-auto max-w-[90%] md:mx-0 md:max-w-[547px] relative  ">
             {/* min-w-[344px] */}
             <div className="rounded-[8px] border border-[#5E4A4A] absolute  w-full h-[526px]  md:w-full md:h-[681px]  "></div>
             <img
