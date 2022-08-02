@@ -108,11 +108,11 @@ const Homepage = () => {
           help you suceed as a famer
         </p>
       </div>
-      <div className=" flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row" >
-        <div className="  font-semibold  text-[32px] leading-[39.6px] max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  " >
+      <div className="   flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row" >
+        <div className=" w-[70vw] h-fit font-semibold  text-[32px] leading-[39.6px] md:max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  " >
             <h2  className=" tracking-tight mb-3  " >Start Today</h2>
             <p className="mb-8 font-[400] text-[18px] leading-[22px] md:text-[32px] md:leading-[39.6px] " >Take control of your farmland and save money with cocoadec</p>
-            <button className="text-[16px] leading-[20px] bg-main w-[90%] md:w-[189px] h-[50px] text-white rounded " >create an account</button>
+            <button className="text-[16px] leading-[20px] bg-main w-[100%] md:w-[189px] h-[50px] text-white rounded " >create an account</button>
         </div>
         <div className="flex flex-col space-y-[32px] md:space-y-0  md:space-x-[32px] md:flex-row " >
             <div className=" space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] " >
