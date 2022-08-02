@@ -41,7 +41,7 @@ const Homepage = () => {
           </div>
           <div className="mt-[63.75px] md:mt-0 w-fit mx-auto max-w-[90%] md:mx-0 md:max-w-[547px] relative  ">
             {/* min-w-[344px] */}
-            <div className="rounded-[8px] border border-[#5E4A4A] absolute  w-full h-[526px]  md:w-full md:h-[681px]  "></div>
+            <div className="rounded-[8px] border border-[#5E4A4A] absolute left-[6px] md:left-0   w-full h-[526px]  md:w-full md:h-[681px]  "></div>
             <img
               src={Home}
               className=" grayscale rounded-[8px] ml-[10px] md:ml-[16px] -mt-[6px] md:-mt-[10px] w-auto h-[526px] md:w-auto md:h-[681px]  "

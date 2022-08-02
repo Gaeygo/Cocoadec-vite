@@ -3,7 +3,7 @@ import Logo from "../assets/Logo.svg";
 
 const Navbar = () => {
   return (
-    <div className=" mx-[25px]  h-[80px] flex items-center justify-between font-clash text-main font-semibold text-[20px]  leading-[24.6px]   ">
+    <div className=" mx-[25px]   h-[80px] flex items-center justify-between font-clash text-main font-semibold text-[20px]  leading-[24.6px]   ">
       <div className="child-hover:cursor-pointer flex items-center ">
         <div  className="mr-[96px] flex  items-center">
           <img className="w-[44.06px] h-[38.73px] " src={Logo} />
