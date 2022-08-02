@@ -8,8 +8,11 @@ module.exports = {
      },
      fontFamily: {
       clash : ['"Clash Display"', "sans-serif"]
-     }
+     },
+     
     },
+    
+    
   },
   plugins: [   function ({ addVariant }) {
     addVariant('child', '& > *');

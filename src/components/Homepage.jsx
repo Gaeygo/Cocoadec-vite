@@ -4,21 +4,21 @@ import Home from "../assets/homepage.png";
 const Homepage = () => {
   return (
     <>
-      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] ">
-        <div className="flex items-center text-xs leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
+      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] font-clash ">
+        <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
             now
           </button>
-          <p className="">
+          <p className=" tracking-tight ">
             Introducing open source disease api
             <span>
               <a> - Learn more</a>
             </span>
           </p>
         </div>
-        <div className="flex flex-col-reverse  md:flex-row md:justify-between">
+        <div className="flex flex-col-reverse  md:flex-row md:justify-between font-clash">
           <div className=" w-fit mx-auto mt-[60px] md:mt-[161px] md:mx-0">
-            <h1 className=" text-[38px] leading-[47px] md:text-[57px] md:leading-[73.8px] w-[344px] md:w-[462px] md:h-[148px] ">
+            <h1 className=" text-[38px] leading-[47px] tracking-tight md:text-[60px] md:leading-[73.8px] w-[344px] md:w-[462px] md:h-[148px] ">
               Take your farm to the next level
             </h1>
             <h3 className=" text-[18px] leading-[22px] my-5 font-normal max-w-[338px]  md:my-[30px]  ">
@@ -107,6 +107,25 @@ const Homepage = () => {
           Cocodec doesn’t only help you to reduce crop failure, we are here to
           help you suceed as a famer
         </p>
+      </div>
+      <div className=" flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row" >
+        <div className="  font-semibold  text-[32px] leading-[39.6px] max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  " >
+            <h2  className=" tracking-tight mb-3  " >Start Today</h2>
+            <p className="mb-8 font-[400] " >Take control of your farmland and save money with cocoadec</p>
+            <button className="text-[16px] leading-[20px] bg-main w-[90%] md:w-[189px] h-[50px] text-white rounded " >create an account</button>
+        </div>
+        <div className="flex flex-col space-y-[32px] md:space-y-0  md:space-x-[32px] md:flex-row " >
+            <div className=" space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] " >
+                <h3 className=" mb-[10px] font-semibold " >Are you a farmer?</h3>
+                <p>Change your life today for free by using cocoadec on your farmland</p>
+                <button className=" text-main text-[14px] leading-[17px] " >Sign up</button>
+            </div>
+            <div className="  space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] " >
+                <h3 className=" mb-[10px] font-semibold " >Are you a developer?</h3>
+                <p>Build and create solutions for farmers today with our tools</p>
+                <button className=" text-main text-[14px] leading-[17px] " >View Documentation</button>
+            </div>
+        </div>
       </div>
     </>
   );
