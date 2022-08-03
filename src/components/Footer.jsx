@@ -2,7 +2,7 @@ import React from "react";
 import LogoWhite from "../assets/Logo-white.svg";
 const Footer = () => {
   return (
-    <footer className="text-white w-full bg-main p-[90px]  ">
+    <footer className="text-white w-full bg-main p-[45px] md:p-[90px]  ">
       <div className="  flex flex-col md:flex-row md:justify-between ">
         <div className=" ">
           <div className="flex items-center mb-4">
