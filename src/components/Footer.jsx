@@ -42,70 +42,56 @@ const Footer = () => {
                 <a>About</a>
               </li>
               <li>
-                <a>About</a>
+                <a>Team</a>
               </li>
               <li>
-                <a>About</a>
+                <a>FAQs</a>
               </li>
               <li>
-                <a>About</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className="font-semibold text-[24px] leading-[29px]">
-              Company
-            </h2>
-            <ul className="font-medium text-[18px] leading-[22px] space-y-[12px]">
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>About</a>
+                <a>Contact Us</a>
               </li>
             </ul>
           </div>
           <div>
             <h2 className="font-semibold text-[24px] leading-[29px]">
-              Company
+              Farmers
             </h2>
             <ul className="font-medium text-[18px] leading-[22px] space-y-[12px]">
               <li>
-                <a>About</a>
+                <a>Why use Cocoadec</a>
               </li>
               <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-              <li>
-                <a>About</a>
+                <a>How it works</a>
               </li>
             </ul>
           </div>
-          <div className=" md:col-start-2  " >
-            <h2 className="font-semibold  text-[24px] leading-[29px]">
-              Company
+          <div>
+            <h2 className="font-semibold text-[24px] leading-[29px]">
+              Developers
             </h2>
             <ul className="font-medium text-[18px] leading-[22px] space-y-[12px]">
               <li>
-                <a>About</a>
+                <a>Quick Start</a>
               </li>
               <li>
-                <a>About</a>
+                <a>Libraries</a>
               </li>
               <li>
-                <a>About</a>
+                <a>API Documentation</a>
+              </li>
+            </ul>
+          </div>
+          <div className=" md:col-start-2  ">
+            <h2 className="font-semibold  text-[24px] leading-[29px]">Legal</h2>
+            <ul className="font-medium text-[18px] leading-[22px] space-y-[12px]">
+              <li>
+                <a>Privacy Policy</a>
               </li>
               <li>
-                <a>About</a>
+                <a>Terms of Use</a>
+              </li>
+              <li>
+                <a>MIT License</a>
               </li>
             </ul>
           </div>
