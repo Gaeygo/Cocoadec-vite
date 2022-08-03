@@ -16,11 +16,11 @@ const Footer = () => {
               Cocoadec
             </p>
           </div>
-          <p className="mb-[45px] text-center md:text-left mx-auto md:mx-0 text-lg leading-[22px] font-normal max-w-[338px] ">
+          <p className="mb-[45px] text-left  md:mx-0 text-lg leading-[22px] font-normal max-w-[338px] ">
             Empower your farmers to reduce crop loss with Artificial
             Intelligence
           </p>
-          <ul className=" flex font-medium text-[20px] leading-[24.6px] space-x-[24px] text-center mx-auto md:mx-0 w-fit ">
+          <ul className=" flex font-medium text-[20px] leading-[24.6px] space-x-[24px] text-center  md:mx-0 w-fit ">
             <li>
               <a>Twitter</a>
             </li>
