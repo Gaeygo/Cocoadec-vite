@@ -21,6 +21,7 @@ const Login = () => {
       farmName: "",
       emailAddress: "",
       phoneNumber: "",
+      password: ""
     },
     validationSchema: signupSchema,
     onSubmit: (values) => {
@@ -108,7 +109,23 @@ const Login = () => {
               onChange={formik.handleChange}
             />
           </div>
-
+          <div className=" flex flex-col ">
+            <label
+              className="text-[16px] leading-[24px] font-medium "
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] "
+              id="password"
+              name="password"
+              type="password"
+              defaultValue={formik.initialValues.password}
+              value={formik.values.password}
+              onChange={formik.handleChange}
+            />
+          </div>
           <div className=" w-[300px] ">
             <label
               className="text-[16px] leading-[24px] font-medium "
