@@ -145,7 +145,7 @@ const Login = () => {
             />
             <h1>{formik.errors.phoneNumber}</h1>
           </div>
-          <div class="flex flex-row items-center">
+          <div class="flex flex-row items-center space-x-[14px]">
             <input
               class=" accent-main h-[50px] "
               type="checkbox"
