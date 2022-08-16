@@ -128,7 +128,7 @@ const Login = () => {
               onChange={formik.handleChange}
             />
           </div>
-          <div className=" w-[300px] ">
+          <div className="  ">
             <label
               className="text-[16px] leading-[24px] font-medium "
               htmlFor="phoneNumber"
