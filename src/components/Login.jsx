@@ -12,7 +12,9 @@ const Login = () => {
     farmName: Yup.string().required("Fullname is required"),
     emailAddress: Yup.string().email(),
     phoneNumber: Yup.string().phone().required(),
-    password: Yup.string().min(6, "Password length should be greater than 5").required("Password is required")
+    password: Yup.string()
+      .min(6, "Password length should be greater than 5")
+      .required("Password is required"),
   });
   const [value, setValue] = useState();
   const formik = useFormik({
@@ -21,7 +23,7 @@ const Login = () => {
       farmName: "",
       emailAddress: "",
       phoneNumber: "",
-      password: ""
+      password: "",
     },
     validationSchema: signupSchema,
     onSubmit: (values) => {
@@ -56,7 +58,7 @@ const Login = () => {
           </a>
         </div>
       </div>
-      <div className=" flex w-[360px] justify-center mx-auto  ">
+      <div className=" flex w-[360px] justify-center mx-auto mb-[100px]   ">
         <form onSubmit={formik.handleSubmit} className="space-y-[40px]">
           <div className=" flex flex-col ">
             <label
@@ -140,12 +142,30 @@ const Login = () => {
               name="phoneNumber"
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               defaultCountry="NG"
-              
             />
             <h1>{formik.errors.phoneNumber}</h1>
           </div>
+          <div class="flex flex-row items-center">
+            <input
+              class=" accent-main h-[50px] "
+              type="checkbox"
+              value=""
+              id="flexCheckChecked3"
+              // checked
+            />
 
-          <button type="submit">Submit</button>
+            <label class=" text-gray-800" for="flexCheckDefault">
+              I have read, understood and i agree to Cocoadec’ Privacy Policy
+              and Terms and Conditions{" "}
+            </label>
+          </div>
+
+          <button
+            className="w-full  h-[50px] rounded-lg text-[16px] leading-[19px] font-semibold bg-[#CFCECE] text-center "
+            type="submit"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </>
