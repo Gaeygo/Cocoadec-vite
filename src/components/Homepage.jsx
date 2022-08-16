@@ -1,9 +1,12 @@
 import React from "react";
 import Home from "../assets/homepage.png";
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 const Homepage = () => {
   return (
     <>
+    <Navbar/>
       <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] font-clash ">
         <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
@@ -127,6 +130,7 @@ const Homepage = () => {
             </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
