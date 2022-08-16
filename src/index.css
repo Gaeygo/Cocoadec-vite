@@ -11,6 +11,27 @@
 body {
   font-family: "Clash Display";
 }
+
+.PhoneInput {
+  height: 50px;
+  border: 1px solid #CFCECE;
+  border-radius: 8px;
+}
+
+.PhoneInputInput {
+  height: 30px;
+  width: 80%;
+
+}
+
+.PhoneInput:focus-within{
+  outline: 1px solid black;
+}
+
+.PhoneInputInput:focus-visible {
+  outline: none
+}
+
 /* 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
