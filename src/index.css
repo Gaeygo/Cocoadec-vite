@@ -16,6 +16,7 @@ body {
   height: 50px;
   border: 1px solid #CFCECE;
   border-radius: 8px;
+  padding-left: 5px;
 }
 
 .PhoneInputInput {

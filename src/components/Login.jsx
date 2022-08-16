@@ -8,10 +8,11 @@ import "react-phone-number-input/style.css";
 
 const Login = () => {
   const signupSchema = Yup.object().shape({
-    // fullName: Yup.string().required("Fullname is required"),
-    // farmName: Yup.string().required("Fullname is required"),
-    // emailAddress: Yup.string().email(),
+    fullName: Yup.string().required("Fullname is required"),
+    farmName: Yup.string().required("Fullname is required"),
+    emailAddress: Yup.string().email(),
     phoneNumber: Yup.string().phone().required(),
+    password: Yup.string().min(6, "Password length should be greater than 5").required("Password is required")
   });
   const [value, setValue] = useState();
   const formik = useFormik({
