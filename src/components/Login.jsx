@@ -8,13 +8,17 @@ import "react-phone-number-input/style.css";
 
 const Login = () => {
   const signupSchema = Yup.object().shape({
-    fullName: Yup.string().required("Fullname is required"),
-    farmName: Yup.string().required("Fullname is required"),
-    emailAddress: Yup.string().email(),
-    phoneNumber: Yup.string().phone().required(),
+    fullName: Yup.string().required("Full name is required"),
+    farmName: Yup.string().required("Farm name is required"),
+    emailAddress: Yup.string().email().required("Email address is required"),
+    phoneNumber: Yup.string()
+
+      .required("Please Input your phone number")
+      .phone("PhoneNumber should be valid"),
     password: Yup.string()
       .min(6, "Password length should be greater than 5")
       .required("Password is required"),
+    agreePolicy: Yup.boolean().required()
   });
   const [value, setValue] = useState();
   const formik = useFormik({
@@ -24,6 +28,7 @@ const Login = () => {
       emailAddress: "",
       phoneNumber: "",
       password: "",
+      agreePolicy: false
     },
     validationSchema: signupSchema,
     onSubmit: (values) => {
@@ -58,41 +63,45 @@ const Login = () => {
           </a>
         </div>
       </div>
-      <div className=" flex w-[360px] justify-center mx-auto mb-[100px]   ">
+      <div className=" flex max-w-[85%] md:max-w-[360px] justify-center mx-auto mb-[100px]   ">
         <form onSubmit={formik.handleSubmit} className="space-y-[40px]">
           <div className=" flex flex-col ">
             <label
               className="text-[16px] leading-[24px] font-medium "
               htmlFor="fullName"
             >
-              FullName
+              Full Name
             </label>
             <input
-              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] "
+              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] pl-[20px] "
               id="fullName"
               name="fullName"
               type="text"
-              defaultValue={formik.initialValues.fullName}
               value={formik.values.fullName}
               onChange={formik.handleChange}
             />
+            <h1 className="text-[14px] leading-[17px] font-medium text-invalid ml-[20px] mt-[10px] ">
+              {formik.errors.fullName}
+            </h1>
           </div>
           <div className=" flex flex-col ">
             <label
               className="text-[16px] leading-[24px] font-medium "
               htmlFor="farmName"
             >
-              FarmName
+              Farm Name
             </label>
             <input
-              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] "
+              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] pl-[20px] "
               id="farmName"
               name="farmName"
               type="text"
-              defaultValue={formik.initialValues.farmName}
-              value={formik.values.farmNameName}
+              value={formik.values.farmName}
               onChange={formik.handleChange}
             />
+            <h1 className="text-[14px] leading-[17px] font-medium text-invalid ml-[20px] mt-[10px] ">
+              {formik.touched && formik.errors.farmName}
+            </h1>
           </div>
           <div className=" flex flex-col ">
             <label
@@ -102,14 +111,16 @@ const Login = () => {
               Email Address
             </label>
             <input
-              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] "
+              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] pl-[20px] "
               id="emailAddress"
               name="emailAddress"
               type="text"
-              defaultValue={formik.initialValues.emailAddress}
               value={formik.values.emailAddress}
               onChange={formik.handleChange}
             />
+            <h1 className="text-[14px] leading-[17px] font-medium text-invalid ml-[20px] mt-[10px] ">
+              {formik.touched && formik.errors.emailAddress}
+            </h1>
           </div>
           <div className=" flex flex-col ">
             <label
@@ -119,14 +130,16 @@ const Login = () => {
               Password
             </label>
             <input
-              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] "
+              className=" border-[#CFCECE] border-[1px] rounded-lg h-[50px] appearance-none pl-[20px] "
               id="password"
               name="password"
               type="password"
-              defaultValue={formik.initialValues.password}
               value={formik.values.password}
               onChange={formik.handleChange}
             />
+            <h1 className="text-[14px] leading-[17px] font-medium text-invalid ml-[20px] mt-[10px] ">
+              {formik.touched && formik.errors.password}
+            </h1>
           </div>
           <div className="  ">
             <label
@@ -143,26 +156,31 @@ const Login = () => {
               onChange={(value) => formik.setFieldValue("phoneNumber", value)}
               defaultCountry="NG"
             />
-            <h1>{formik.errors.phoneNumber}</h1>
+            <h1 className="text-[14px] leading-[17px] font-medium text-invalid ml-[20px] mt-[10px] ">
+              {formik.touched && formik.errors.phoneNumber}
+            </h1>
           </div>
-          <div class="flex flex-row items-center space-x-[14px]">
+          <div className="flex flex-row items-center space-x-[14px]">
             <input
-              class=" accent-main h-[50px] "
+              className=" accent-main h-[50px] "
               type="checkbox"
-              value=""
-              id="flexCheckChecked3"
+              value="agreePolicy"
+              id="agreePolicy"
+              checked={formik.values.agreePolicy}
+              onChange={formik.handleChange}
               // checked
             />
 
-            <label class=" text-gray-800" for="flexCheckDefault">
+            <label className=" text-gray-800" htmlFor="agreePolicy">
               I have read, understood and i agree to Cocoadec’ Privacy Policy
               and Terms and Conditions{" "}
             </label>
           </div>
 
           <button
-            className="w-full  h-[50px] rounded-lg text-[16px] leading-[19px] font-semibold bg-[#CFCECE] text-center "
+            className={`w-full  h-[50px] rounded-lg text-[16px] leading-[19px] text-white disabled:text-main font-semibold disabled:bg-[#CFCECE] text-center bg-main focus:ring focus:ring-lime-500  disabled:cursor-not-allowed `}
             type="submit"
+            disabled={!(formik.isValid && formik.dirty)}
           >
             Submit
           </button>
