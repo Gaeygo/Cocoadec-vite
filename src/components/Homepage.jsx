@@ -1,12 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useAtomValue } from "jotai";
 import Home from "../assets/homepage.png";
-import Navbar from "./Navbar"
-import Footer from "./Footer"
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import auth from "../auth/auth";
 
 const Homepage = () => {
+  const currentUser = useAtomValue(auth.user);
+  const navigate = useNavigate();
+  const handleGetStart = () => {
+    if (currentUser) {
+      navigate("/dashboard");
+    }
+    navigate("/signup");
+  };
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] font-clash ">
         <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
@@ -28,7 +39,10 @@ const Homepage = () => {
               Empower your farmers to reduce crop loss with Artificial
               Intelligence
             </h3>
-            <button className=" w-[90%] mb-[35px] md:mb-0  md:w-[160px] h-[50px] bg-main text-white text-[16px] leading-[19.68px] rounded-[4px] ">
+            <button
+              onClick={handleGetStart}
+              className=" w-[90%] mb-[35px] md:mb-0  md:w-[160px] h-[50px] bg-main text-white text-[16px] leading-[19.68px] rounded-[4px] "
+            >
               Get Started
             </button>
             <div className=" hidden mt-[153px] md:block">
@@ -111,26 +125,39 @@ const Homepage = () => {
           help you suceed as a famer
         </p>
       </div>
-      <div className="   flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row" >
-        <div className=" w-[70vw] h-fit font-semibold  text-[32px] leading-[39.6px] md:max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  " >
-            <h2  className=" tracking-tight mb-3  " >Start Today</h2>
-            <p className="mb-8 font-[400] text-[18px] leading-[22px] md:text-[32px] md:leading-[39.6px] " >Take control of your farmland and save money with cocoadec</p>
-            <button className="text-[16px] leading-[20px] bg-main w-[100%] md:w-[189px] h-[50px] text-white rounded " >create an account</button>
+      <div className="   flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row">
+        <div className=" w-[70vw] h-fit font-semibold  text-[32px] leading-[39.6px] md:max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  ">
+          <h2 className=" tracking-tight mb-3  ">Start Today</h2>
+          <p className="mb-8 font-[400] text-[18px] leading-[22px] md:text-[32px] md:leading-[39.6px] ">
+            Take control of your farmland and save money with cocoadec
+          </p>
+          <button
+            className="text-[16px] leading-[20px] bg-main w-[100%] md:w-[189px] h-[50px] text-white rounded "
+            onClick={handleGetStart}
+          >
+           {currentUser ? "start now" :   "create an account"}
+          </button>
         </div>
-        <div className="flex flex-col space-y-[32px] md:space-y-0  md:space-x-[32px] md:flex-row " >
-            <div className=" space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] " >
-                <h3 className=" mb-[10px] font-semibold " >Are you a farmer?</h3>
-                <p>Change your life today for free by using cocoadec on your farmland</p>
-                <button className=" text-main text-[14px] leading-[17px] " >Sign up</button>
-            </div>
-            <div className="  space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] " >
-                <h3 className=" mb-[10px] font-semibold " >Are you a developer?</h3>
-                <p>Build and create solutions for farmers today with our tools</p>
-                <button className=" text-main text-[14px] leading-[17px] " >View Documentation</button>
-            </div>
+        <div className="flex flex-col space-y-[32px] md:space-y-0  md:space-x-[32px] md:flex-row ">
+          <div className=" space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] ">
+            <h3 className=" mb-[10px] font-semibold ">Are you a farmer?</h3>
+            <p>
+              Change your life today for free by using cocoadec on your farmland
+            </p>
+            <button className=" text-main text-[14px] leading-[17px] ">
+              Sign up
+            </button>
+          </div>
+          <div className="  space-y-[10px] w-[286px] h-[240px] items-start px-[30px] justify-center flex flex-col bg-[#F4F3EE] ">
+            <h3 className=" mb-[10px] font-semibold ">Are you a developer?</h3>
+            <p>Build and create solutions for farmers today with our tools</p>
+            <button className=" text-main text-[14px] leading-[17px] ">
+              View Documentation
+            </button>
+          </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

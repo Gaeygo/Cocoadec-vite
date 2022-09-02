@@ -3,20 +3,21 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
-     colors: {
-      "main": "#403131",
-      "invalid": "#B02828"
-     },
-     fontFamily: {
-      clash : ['"Clash Display"', "sans-serif"]
-     },
-     
+      colors: {
+        main: "#403131",
+        invalid: "#B02828",
+      },
+      fontFamily: {
+        clash: ['"Clash Display"', "sans-serif"],
+      },
     },
-    
-    
   },
-  plugins: [   function ({ addVariant }) {
-    addVariant('child', '& > *');
-    addVariant('child-hover', '& > *:hover');
-}],
-}
+  plugins: [
+    require("tw-elements/dist/plugin"),
+
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
+};
