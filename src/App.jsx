@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {supabase} from "../supabase"
+import { supabase } from "../supabase";
 import "./App.css";
 import { Route, Routes } from "react-router";
 import { useAtom } from "jotai";
@@ -8,13 +8,14 @@ import Homepage from "./components/Homepage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Otp from "./components/Otp";
-import auth from "./auth/auth"
+import auth from "./auth/auth";
 import Dashboard from "./components/Dashboard";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const [count, setCount] = useState(0);
   const { user } = auth;
-  const [currentUser, setCurrentUser] = useAtom(user)
+  const [currentUser, setCurrentUser] = useAtom(user);
   useEffect(() => {
     // get session data if there is an active session
     const session = supabase.auth.session();
@@ -38,12 +39,19 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-       
-          <Route path="signup" element={<Signup />} />
-          <Route path="login" element={<Login />} />
-          <Route path="otp" element={<Otp />} />
-          <Route path="dashboard" element={<Dashboard />} />
 
+        <Route path="signup" element={<Signup />} />
+        <Route path="login" element={<Login />} />
+        <Route path="otp" element={<Otp />} />
+        <Route
+          path="dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        {/* <Route path="test" element={<Dashboard />} /> */}
       </Routes>
     </div>
   );

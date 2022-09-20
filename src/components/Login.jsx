@@ -155,7 +155,7 @@ const Login = () => {
           loginForm
         )}
       </div>
-      <div className="flex items-center justify-center mt-9 "> {error}</div>
+      <div className="flex items-center justify-center mt-9 text-red-600 "> {error}</div>
     </>
   );
 };
