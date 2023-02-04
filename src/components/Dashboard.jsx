@@ -26,7 +26,7 @@ const Dashboard = () => {
     e.preventDefault();
     e.stopPropagation();
     const formData = new FormData();
-    formData.append("image", image);
+    formData.append("image", imageUrl);
     formData.append("filename", `${imageName}`);
     console.log(formData)
     // await axios

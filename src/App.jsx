@@ -51,7 +51,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        {/* <Route path="test" element={<Dashboard />} /> */}
+        <Route path="test" element={<Dashboard />} />
       </Routes>
     </div>
   );

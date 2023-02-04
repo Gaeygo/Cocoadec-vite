@@ -2,8 +2,8 @@ import React from "react";
 import LogoWhite from "../assets/Logo-white.svg";
 const Footer = () => {
   return (
-    <footer className="text-white w-full bg-main p-[45px] md:p-[90px]  ">
-      <div className="  flex flex-col md:flex-row md:justify-between ">
+    <footer className="text-white w-full bg-main p-[45px] xl:p-[90px]  ">
+      <div className="  flex flex-col xl:flex-row xl:justify-between ">
         <div className=" ">
           <div className="flex items-center mb-4">
             {" "}
@@ -20,7 +20,7 @@ const Footer = () => {
             Empower your farmers to reduce crop loss with Artificial
             Intelligence
           </p>
-          <ul className=" flex font-medium text-[20px] leading-[24.6px] space-x-[24px] text-center  md:mx-0 w-fit ">
+          <ul className=" flex font-medium text-[20px] leading-[24.6px] space-x-[24px] text-center  xl:mx-0 w-fit ">
             <li>
               <a>Twitter</a>
             </li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className=" mt-[126px] md:mt-0 grid md:grid-cols-3 gap-[100px] mr-[134px] md:place-items-center ">
+        <div className=" mt-[126px] xl:mt-0 grid  xl:grid-cols-3  mr-[134px] xl:mr-0 gap-24 ">
           <div>
             <h2 className="font-semibold text-[24px] leading-[29px]">
               Company
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" mt-[120px] md:mt-0  md:mb-[126px] w-fit">
+      <div className=" mt-[120px] lg:mt-0  md:mb-[126px] w-fit">
         <h2 className=" space-y-[12px] font-semibold text-[20px] leading-[24.6px] ">
           Contact
         </h2>
@@ -105,7 +105,7 @@ const Footer = () => {
           hello@cocoadec.app
         </a>
       </div>
-      <p className=" mt-[20px] md:mt-0 w-fit font-medium text-[20px] leading-[24.6px] ">
+      <p className=" mt-[20px] xl:mt-0 w-fit font-medium text-[20px] leading-[24.6px] ">
         All rights reserved. © 2022 Cocoadec
       </p>
     </footer>

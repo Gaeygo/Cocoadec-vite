@@ -19,7 +19,7 @@ const Homepage = () => {
     <>
       <Navbar />
       <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] font-clash ">
-        <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[86px] w-fit mx-auto md:mx-0 ">
+        <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[46px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
             now
           </button>
@@ -58,10 +58,10 @@ const Homepage = () => {
           </div>
           <div className="mt-[63.75px] md:mt-0 w-fit mx-auto max-w-[90%] md:mx-0 md:max-w-[547px] relative  ">
             {/* min-w-[344px] */}
-            <div className="rounded-[8px] border border-[#5E4A4A] absolute -left-[8px] md:left-0   w-full h-[526px]  md:w-full md:h-[681px]  "></div>
+            <div className="rounded-[8px] border border-[#5E4A4A] absolute -left-[8px] md:left-0   w-full h-[426px]  md:w-full md:h-[581px]  "></div>
             <img
               src={Home}
-              className=" grayscale rounded-[8px] ml-[10px] md:ml-[16px] -mt-[6px] md:-mt-[10px] w-auto h-[526px] md:w-auto md:h-[681px]  "
+              className=" grayscale rounded-[8px] ml-[10px] md:ml-[16px] -mt-[6px] md:-mt-[10px] w-auto h-[426px] md:w-auto md:h-[581px] hover:grayscale-0  "
             />
           </div>
         </div>
@@ -125,14 +125,14 @@ const Homepage = () => {
           help you suceed as a famer
         </p>
       </div>
-      <div className="   flex flex-col items-center md:justify-between mx-[99px] mt-[245px] mb-[140px] md:mb-[125px] md:flex-row">
-        <div className=" w-[70vw] h-fit font-semibold  text-[32px] leading-[39.6px] md:max-w-[429px] text-center md:text-left mb-[60px] md:mb-0  ">
+      <div className="   flex flex-col items-center lg:justify-between mx-[99px] mt-[245px] mb-[140px] lg:mb-[125px] lg:flex-row">
+        <div className=" w-[70vw] h-fit font-semibold  text-[32px] leading-[39.6px] lg:max-w-[429px] text-center lg:text-left mb-[60px] lg:mb-0  ">
           <h2 className=" tracking-tight mb-3  ">Start Today</h2>
           <p className="mb-8 font-[400] text-[18px] leading-[22px] md:text-[32px] md:leading-[39.6px] ">
             Take control of your farmland and save money with cocoadec
           </p>
           <button
-            className="text-[16px] leading-[20px] bg-main w-[100%] md:w-[189px] h-[50px] text-white rounded "
+            className="text-[16px] leading-[20px] bg-main w-[100%] lg:w-[189px] h-[50px] text-white rounded "
             onClick={handleGetStart}
           >
            {currentUser ? "start now" :   "create an account"}
