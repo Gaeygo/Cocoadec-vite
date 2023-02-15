@@ -8,6 +8,16 @@
   src: url("../src/assets/ClashDisplay-Regular.otf");
 }
 
+@font-face {
+  font-family: 'Clash-Display';
+  src: url('../src/assets/ClashDisplay-Variable.woff2') format('woff2'),
+       url('../src/assets/ClashDisplay-Variable.woff') format('woff'),
+       url('../src/assets/ClashDisplay-Variable.ttf') format('ttf');
+       font-weight: 200 900;
+       font-display: swap;
+       font-style: normal;
+}
+
 body {
   font-family: "Clash Display";
 }

@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" mx-[25px]   h-[80px] flex items-center justify-between font-clash text-main font-semibold text-[20px]  leading-[24.6px]   ">
+    <div className=" mx-[25px]   h-[80px] flex items-center justify-between font-clash text-main  text-[20px]  leading-[24.6px] font-semibold   ">
       <div className="child-hover:cursor-pointer flex items-center ">
         <div
           className="mr-[96px] flex  items-center"
@@ -27,7 +27,7 @@ const Navbar = () => {
             role="link"
             href="/"
             aria-label="Cocoadec back to homepage"
-            className="  text-[24.5px] leading-[30px] focus: outline-1 focus: outline-black "
+            className=" font-clash_bold  text-[30.5px] leading-[30px] focus: outline-1 focus: outline-black "
           >
             Cocoadec{" "}
           </a>

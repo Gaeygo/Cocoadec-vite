@@ -18,7 +18,7 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
-      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[860px] md:px-[51px] font-clash ">
+      <div className=" my-[37px] md:my-0 font-semibold bg-[#F4F3EE] rounded-[12px] min-w-fit md:w-auto md:min-w-fit max-w-full mx-[19px]  box-content md:mx-[25px] h-fit md:h-[746px] md:px-[51px] font-clash ">
         <div className="flex items-center justify-evenly h-fit md:h-auto text-[12px] leading-[14.76px] pt-[46px] w-fit mx-auto md:mx-0 ">
           <button className=" mr-[16px] w-[64px] h-[24px] leading-[19.68px] bg-main text-white text-[16px] rounded-[114px] ">
             now
@@ -45,7 +45,7 @@ const Homepage = () => {
             >
               Get Started
             </button>
-            <div className=" hidden mt-[153px] md:block">
+            <div className=" hidden mt-[103px] md:block">
               <p className="text-[12px] leading-[15px] mb-[12px] ">
                 Trusted by
               </p>
@@ -58,10 +58,10 @@ const Homepage = () => {
           </div>
           <div className="mt-[63.75px] md:mt-0 w-fit mx-auto max-w-[90%] md:mx-0 md:max-w-[547px] relative  ">
             {/* min-w-[344px] */}
-            <div className="rounded-[8px] border border-[#5E4A4A] absolute -left-[8px] md:left-0   w-full h-[426px]  md:w-full md:h-[581px]  "></div>
+            <div className="rounded-[8px] border border-[#5E4A4A] absolute -left-[8px] md:left-0   w-full h-[426px]  md:w-full md:h-[511px]  "></div>
             <img
               src={Home}
-              className=" grayscale rounded-[8px] ml-[10px] md:ml-[16px] -mt-[6px] md:-mt-[10px] w-auto h-[426px] md:w-auto md:h-[581px] hover:grayscale-0  "
+              className=" grayscale rounded-[8px] ml-[10px] md:ml-[16px] -mt-[6px] md:-mt-[10px] w-auto h-[426px] md:w-auto md:h-[511px] hover:grayscale-0  "
             />
           </div>
         </div>

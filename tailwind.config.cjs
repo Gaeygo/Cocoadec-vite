@@ -9,6 +9,7 @@ module.exports = {
       },
       fontFamily: {
         clash: ['"Clash Display"', "sans-serif"],
+        clash_bold: ['"Clash-Display"', "sans-serif"],
       },
     },
   },
